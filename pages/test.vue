@@ -18,7 +18,17 @@
           {{ btnText }}
         </button>
       </div>
-      <textarea type="text" class="area-text" placeholder="See if its correct..." readonly :value="res"></textarea>
+      <div>
+        <h2 v-if="errors.length > 0"> You have {{ errors.length }} errors</h2>
+        <ul>
+          <div v-for="error in errors">{{ error.message }}
+            <h3>Suggestions</h3>
+            <ul>
+              <li v-for="replacement in error.replacements"> {{ replacement.value }}</li>
+            </ul>
+          </div>
+        </ul>
+      </div>
     </div>
 
     <div>
@@ -41,7 +51,7 @@ export default {
   data() {
     return {
       text: 'Sam are off to garden.',
-      res: '',
+      errors: [],
       btnText: 'Check',
     };
   },
@@ -55,7 +65,7 @@ export default {
         const response = await axios.post('/api/check', {
           text: this.text,
         });
-        this.res = response.data.matches[0].message;
+        this.errors = response.data.matches;
       } catch (error) {
         console.error(error);
       }
