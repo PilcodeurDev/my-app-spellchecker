@@ -12,7 +12,13 @@
         </p>
         <p>- <strong>Good fun!</strong> 🤗</p>
       </div>
+
+      <b-form-textarea id="textarea" v-model="text" placeholder="Enter something..." rows="3"
+        max-rows="6"></b-form-textarea>
+      <button @click="$emit('textArea', text)" class="btn-primary">Correction</button>
     </div>
+
+    <nuxt-link to="/test" class="m-5 text-decoration-none fw-bold">correction page</nuxt-link>
 
   </div>
 </template>
