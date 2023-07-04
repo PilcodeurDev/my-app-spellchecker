@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="contained">
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center m-3 mb-5">
-      <nuxt-link to="/" class="mx-2 text-decoration-none fw-bold text-dark">
+      <nuxt-link to="/" class="mx-2 text-decoration-none fw-bold">
         <h1>My SpellChecker</h1>
       </nuxt-link>
 
@@ -12,22 +12,22 @@
         <nuxt-link to="/" class="mx-2 text-decoration-none fw-bold">Logout</nuxt-link>
       </div>
       <div v-else>
-        <nuxt-link to="/login" class="mx-2 text-decoration-none fw-bold">Login</nuxt-link>
-        <nuxt-link to="/register" class="mx-2 text-decoration-none fw-bold">Register</nuxt-link>
+        <nuxt-link to="/login" class="mx-2 text-decoration-none fw-bold text-white">Login</nuxt-link>
+        <nuxt-link to="/register" class="mx-2 text-decoration-none fw-bold text-white">Register</nuxt-link>
       </div>
     </div>
     <nuxt />
   </div>
 </template>
 
-<style>
-* {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: rgb(235, 235, 235);
-}
+<style scoped>
+.contained {
+  min-height: 100vh;
 
-.container {
-  max-width: 95%;
-  /* background: rgb(211, 15, 15); */
+  background-image: url('/image2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 </style>

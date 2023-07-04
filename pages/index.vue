@@ -12,10 +12,6 @@
         </p>
         <p>- <strong>Good fun!</strong> 🤗</p>
       </div>
-
-      <b-form-textarea id="textarea" v-model="text" placeholder="Enter something..." rows="3"
-        max-rows="6"></b-form-textarea>
-      <button @click="$emit('textArea', text)" class="btn-primary">Correction</button>
     </div>
 
     <nuxt-link to="/test" class="m-5 text-decoration-none fw-bold">correction page</nuxt-link>
@@ -29,3 +25,13 @@ export default {
   name: 'IndexPage'
 }
 </script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+</style>
