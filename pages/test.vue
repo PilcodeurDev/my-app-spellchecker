@@ -11,28 +11,33 @@
     <!-- x2 textarea && button -->
 
     <div class="my-5 d-flex justify-content-around">
-      <textarea type="text" class="area-text" placeholder="Write/paste any content..." autofocus
+      <textarea type="text" class="area-text" placeholder="Write/paste any content..." style="color:white" autofocus
         v-model="text"></textarea>
-      <div class="button-text align-self-center">
-        <button class="px-4 py-2" @click="checkGrammar">
+      <div class="button align-self-center">
+        <button class="button-text px-4 py-2" @click="checkGrammar">
           {{ btnText }}
         </button>
       </div>
-      <div>
-        <h2 v-if="errors.length > 0"> You have {{ errors.length }} errors</h2>
+      <div class="area-response">
+        <h2 v-if="errors.length > 0" class="pb-4"> You have {{ errors.length }} error<span
+            v-if="errors.length > 1">s</span> :
+        </h2>
+        <h3 v-else-if="errors.length < 1">0 Error ! 😎👌</h3>
         <ul>
-          <div v-for="error in errors">{{ error.message }}
-            <h3>Suggestions</h3>
-            <ul>
-              <li v-for="replacement in error.replacements"> {{ replacement.value }}</li>
-            </ul>
+          <div v-for="(error, index) in errors" v-if="errors.length > 0" class="cards">
+            <h4>Error N°{{ index + 1 }}:</h4>
+            {{ error.message }}
+            <h4 class="mt-3 mb-2">Suggestion:</h4>
+            <p inline v-for="replacement in error.replacements"> - {{ replacement.value }}</p>
+
           </div>
         </ul>
+
       </div>
     </div>
 
     <div>
-      <p class="text-center">
+      <p class="d-flex justify-content-center">
         Made by RapidAPI DevRel Team -
         <a href="https://github.com/RapidAPI/DevRel-Examples-External">
           See more examples like this
@@ -50,7 +55,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      text: 'Sam are off to garden.',
+      text: '',
       errors: [],
       btnText: 'Check',
     };
@@ -79,22 +84,53 @@ export default {
 .area-text {
   width: 30%;
   height: 30vh;
-  padding: 20px;
+  padding: 20px 30px;
 
   border: 1px solid grey;
   border-radius: 21px;
   backdrop-filter: blur(10px);
+  background: rgb(85 85 85 / 31%);
 
   color: white;
   font-weight: 500;
 }
 
-.button-text {
+.button {
   border: 1px solid grey;
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  background: rgb(85 85 85 / 31%);
 
   color: white;
   font-weight: bold;
+
+}
+
+.button-text {
+  letter-spacing: 1px;
+}
+
+.area-response {
+  padding: 20px 40px;
+  width: 40%;
+
+  border: 1px solid grey;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgb(85 85 85 / 31%);
+}
+
+h4 {
+  font-style: italic;
+}
+
+.cards {
+  padding: 20px;
+  margin: 15px auto;
+
+  border: 1px solid grey;
+  border-radius: 10px;
+
+  background: rgb(89 98 118 / 52%);
 }
 </style>
