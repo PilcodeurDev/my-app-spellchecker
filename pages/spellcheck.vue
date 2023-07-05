@@ -8,7 +8,7 @@
       </h3>
     </div>
 
-    <!-- x2 textarea && button -->
+    <!-- x2 text area && button -->
 
     <div class="my-5 d-flex justify-content-around">
       <textarea type="text" class="area-text" placeholder="Write/paste any content..." style="color:white" autofocus
@@ -19,8 +19,7 @@
         </button>
       </div>
       <div class="area-response">
-        <h2 v-if="errors.length > 0" class="pb-4"> You have {{ errors.length }} error<span
-            v-if="errors.length > 1">s</span> :
+        <h2 v-if="errors.length > 0" class="pb-4"> You have {{ errors.length }} error<h2 v-if="errors.length > 1">s</h2> :
         </h2>
         <h3 v-else-if="errors.length < 1">0 Error ! 😎👌</h3>
         <ul>
@@ -29,22 +28,10 @@
             {{ error.message }}
             <h4 class="mt-3 mb-2">Suggestion:</h4>
             <p inline v-for="replacement in error.replacements"> - {{ replacement.value }}</p>
-
           </div>
         </ul>
-
       </div>
     </div>
-
-    <div>
-      <p class="d-flex justify-content-center">
-        Made by RapidAPI DevRel Team -
-        <a href="https://github.com/RapidAPI/DevRel-Examples-External">
-          See more examples like this
-        </a>
-      </p>
-    </div>
-
   </div>
 </template>
 
@@ -62,9 +49,9 @@ export default {
   },
   methods: {
     async checkGrammar() {
-      // Logique de vérification de la grammaire ici
-      // Vous pouvez utiliser this.text pour accéder au texte saisi
-      // et mettre à jour this.res avec le résultat
+      // Grammar check logic here
+      // You can use this.text to access the text entered
+      // And update this.res with the result
       try {
         this.btnText = 'Checking...';
         const response = await axios.post('/api/check', {

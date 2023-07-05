@@ -13,9 +13,6 @@
         <p>- <strong>Good fun!</strong> 🤗</p>
       </div>
     </div>
-
-    <nuxt-link to="/test" class="m-5 text-decoration-none fw-bold">correction page</nuxt-link>
-
   </div>
 </template>
 
@@ -31,7 +28,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  font-size: 20px;
+
 }
 </style>

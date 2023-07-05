@@ -12,8 +12,8 @@
         <nuxt-link to="/" class="mx-2 text-decoration-none fw-bold">Logout</nuxt-link>
       </div>
       <div v-else>
+        <nuxt-link to="/spellcheck" class="mx-2 text-decoration-none fw-bold text-white">Spellcheck</nuxt-link>
         <nuxt-link to="/login" class="mx-2 text-decoration-none fw-bold text-white">Login</nuxt-link>
-        <nuxt-link to="/register" class="mx-2 text-decoration-none fw-bold text-white">Register</nuxt-link>
       </div>
     </div>
     <nuxt />
@@ -24,10 +24,11 @@
 .contained {
   min-height: 100vh;
 
-  background-image: url('/image2.jpg');
+  /* background-image: url('/image2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background: grey;
 }
 </style>
