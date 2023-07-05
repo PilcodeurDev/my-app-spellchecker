@@ -1,70 +1,56 @@
-# my-app-spellchecker
+# 
 
-## Build Setup
+<h1> Welcome to My-App-Spellchecker ! 🤟 </h1>
 
-```bash
-# install dependencies
-$ npm install
+<h4>
+My-App-SpellChecker is an app which helps you to create faultless texts and offers multiples suggestions (and
+          soon in multi languages...) 🧩
+</h4>
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+<h2>Setup ⚙</h2>
 
-# build for production and launch server
-$ npm run build
-$ npm run start
 
-# generate static project
-$ npm run generate
+**(Programming language: Nuxt.js :+1: )**
+
+
+* Clone My-App-Spellchecker in your local:
+```
+gh repo clone PilcodeurDev/my-test-spellchecker
+
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+* Install all dependencies:
 
-## Special Directories
+```
+npm install
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+* Create ".env" file at the root level:
+  
+ ```
+touch .env && code .env
+```
 
 
-### `pages`
+* Add this code:
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+```
+NUXT_PUBLIC_RAPIDAPI_KEY=051f00e344msh088a8a6cd80fe99p11aa70jsn05b157f5f3aa
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+```
+I share my personal key with you, makes good use of it! 😉
 
-### `plugins`
+<h2>Finished 🚩</h2>
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+* Run the server in your shell:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+`npm run dev`
 
-### `static`
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+* Stop the serveur:
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+`ctrl` + `c`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+![Node.js Testing](https://github.com/Goopil/nest-nuxt-starter/workflows/Node.js%20CI/badge.svg)
 
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
-# my-app-spellchecker
+<img align="center" style="width:320px" alt="Nuxt Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Nuxt_logo.svg"/>
