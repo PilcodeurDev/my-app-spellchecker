@@ -4,14 +4,14 @@
     <div>
       <h3
         class="text-lightYellow text-2xl font-raleway font-bold uppercase tracking-wide mb-12 md:text-base md:px-4 md:text-center">
-        Check to see if what you have written is Grammarly correct:
+        Check to see if what you have written is Grammarly correct :
       </h3>
     </div>
 
     <!-- x2 text area && button -->
 
     <div class="my-5 d-flex justify-content-around">
-      <textarea type="text" class="area-text" placeholder="Write/paste any content..." style="color:white" autofocus
+      <textarea type="text" class="area-text main_color" placeholder="Write/paste any content and Check!"
         v-model="text"></textarea>
       <div class="button align-self-center">
         <button class="button-text px-4 py-2" @click="checkGrammar">
@@ -73,22 +73,20 @@ export default {
   height: 30vh;
   padding: 20px 30px;
 
-  border: 1px solid grey;
+  border: 2px solid #363636;
   border-radius: 21px;
   backdrop-filter: blur(10px);
-  background: rgb(85 85 85 / 31%);
+  background: #5cbe95;
 
-  color: white;
   font-weight: 500;
 }
 
 .button {
-  border: 1px solid grey;
+  border: 2px solid #363636;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  background: rgb(85 85 85 / 31%);
+  background: #5cbe95;
 
-  color: white;
   font-weight: bold;
 
 }
@@ -101,10 +99,10 @@ export default {
   padding: 20px 40px;
   width: 40%;
 
-  border: 1px solid grey;
+  border: 2px solid #363636;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  background: rgb(85 85 85 / 31%);
+  background: #5cbe95;
 }
 
 h4 {
