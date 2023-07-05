@@ -5,7 +5,7 @@
     <div class="container">
       <h2 class="mb-5">Welcome on my first Nuxt.js app. I'm so exiting !! 😍</h2>
       <div class="px-3">
-        <p>- My SpellChecker is an app which help you to create faultless texts, offers you correct turn of phrase (and
+        <p>- My SpellChecker is an app which helps you to create faultless texts and offers multiples suggestions (and
           soon in multi languages...).</p>
         <p>- Do not hesitate to try it, the app is free (for now... 😂).</p>
         <!-- <p>- To advance in the app, will <nuxt-link to="/login" class="text-decoration-none fw-bold">Login</nuxt-link>.

@@ -22,7 +22,7 @@
         <h2 v-if="errors.length > 0" class="pb-4"> You have {{ errors.length }} error<h2 v-if="errors.length > 1">s</h2> :
         </h2>
         <h3 v-else-if="errors.length === 0 && requestDone && text.length > 0">0 Error ! 😎👌</h3>
-        <h3 v-else>Please, Check for more informations</h3>
+        <h5 v-else>Please, Check for more informations</h5>
         <ul>
           <div v-for="(error, index) in errors" v-if="errors.length > 0" class="cards">
             <h4>Error N°{{ index + 1 }}:</h4>
