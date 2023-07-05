@@ -11,7 +11,7 @@
     <!-- x2 text area && button -->
 
     <div class="my-5 d-flex justify-content-around">
-      <textarea type="text" class="area-text main_color" placeholder="Write/paste any content and Check!"
+      <textarea type="text" class="area-text main_color" placeholder="Write/paste any content on Check"
         v-model="text"></textarea>
       <div class="button align-self-center">
         <button class="button-text px-4 py-2" @click="checkGrammar">
@@ -21,7 +21,8 @@
       <div class="area-response">
         <h2 v-if="errors.length > 0" class="pb-4"> You have {{ errors.length }} error<h2 v-if="errors.length > 1">s</h2> :
         </h2>
-        <h3 v-else-if="errors.length < 1">0 Error ! 😎👌</h3>
+        <h3 v-else-if="errors.length === 0 && requestDone && text.length > 0">0 Error ! 😎👌</h3>
+        <h3 v-else>Please, Check for more informations</h3>
         <ul>
           <div v-for="(error, index) in errors" v-if="errors.length > 0" class="cards">
             <h4>Error N°{{ index + 1 }}:</h4>
@@ -44,6 +45,7 @@ export default {
     return {
       text: '',
       errors: [],
+      requestDone: false,
       btnText: 'Check',
     };
   },
@@ -61,6 +63,7 @@ export default {
       } catch (error) {
         console.error(error);
       }
+      this.requestDone = true;
       this.btnText = 'Check';
     },
   },
