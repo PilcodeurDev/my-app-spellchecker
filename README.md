@@ -32,7 +32,7 @@ touch .env && code .env
 ```
 
 
-* and add this code:
+* Add this code:
 
 ```
 NUXT_PUBLIC_RAPIDAPI_KEY=051f00e344msh088a8a6cd80fe99p11aa70jsn05b157f5f3aa
