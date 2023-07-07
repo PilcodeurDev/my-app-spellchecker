@@ -32,13 +32,8 @@ touch .env && code .env
 ```
 
 
-* Add this code:
+* Add your API key ( <a href="https://rapidapi.com/grammarbot/api/grammarbot">RapidApi</a> ):
 
-```
-NUXT_PUBLIC_RAPIDAPI_KEY=051f00e344msh088a8a6cd80fe99p11aa70jsn05b157f5f3aa
-
-```
-I share my personal key with you, makes good use of it! 😉
 
 <h2>Finished 🚩</h2>
 
